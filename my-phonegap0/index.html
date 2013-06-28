@@ -12,53 +12,158 @@
 	</head>
 	<body>
 		<!-- Start of first page I -->
-		<div data-role="page" id="page1">
+		<div data-role="page" id="info" data-theme="a" data-content-theme="a">
 			<!-- Header -->
-			<div data-role="header">
-				<h1>My Health App 0.1v &amp;</h1>
+			<div data-role="header"  data-iconpos="bottom">
+				<h1>My Health 0.1v</h1>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#info" data-role="button" data-icon="info" data-iconpos="right" data-theme="c">Info</a></li>
+						<li><a href="#highlights" data-role="button" data-icon="star" data-iconpos="right" data-theme="c">Hightlights</a></li>
+						<li><a href="#contact" data-role="button" data-icon="email" data-iconpos="right" data-theme="c">Contact</a></li>
+					</ul>
+				</div><!-- /navbar -->
+
+			</div>
+			<!-- /header -->
+			<!-- Content    -->
+			<div data-role="content" id="content">
+				<h3>INFO</h3>
+				<div data-role="collapsible-set">
+					<div data-role="collapsible" data-theme="b">
+						<h3>About the bridge</h3>
+						<img src="images/bridge2.jpg" width="100%" border="1px" />
+					</div>
+					<div data-role="collapsible" data-collapsed="true" data-theme="b">
+						<h3>About this device</h3>
+						<p id="devInfo"></p>
+					</div>
+					<div data-role="collapsible" data-theme="b">
+						<h3>About this software</h3>
+						<p id="appInfo"></p>
+					</div>		
+				</div>
+			</div>
+			<!-- /content -->
+			<!-- footer -->
+			<div data-role="footer" data-position="fixed">
+				<!-- /navbar <div data-role="navbar">
+					<ul>
+						<li><a href="template.html">Info</a></li>
+						<li><a href="b.html">Friends</a></li>
+						<li><a href="c.html">Albums</a></li>
+						<li><a href="d.html">Emails</a></li>
+					</ul>
+				</div>-->
+				<h4>&copy; 2013 HAA</h4>
+			</div>
+			<!-- /footer -->
+		</div>
+		
+		<!--------------------------------------- /page -->
+		
+		<div data-role="page" id="highlights" data-theme="a" data-content-theme="a">
+			<!-- Header -->
+			<div data-role="header"  data-iconpos="bottom">
+				<h1>My Health 0.1v</h1>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#info" data-role="button" data-icon="info" data-iconpos="right" data-theme="c">Info</a></li>
+						<li><a href="#highlights" data-role="button" data-icon="star" data-iconpos="right" data-theme="c">Hightlights</a></li>
+						<li><a href="#contact" data-role="button" data-icon="email" data-iconpos="right" data-theme="c">Contact</a></li>
+					</ul>
+				</div><!-- /navbar -->
 
 			</div>
 			<!-- /header -->
 			<!-- Content    -->
 			<div data-role="content">
-				<h3>Content</h3>
-				<p>Click --> <a href="http://healthapplications.com.au"><img src="images/casual.png" /></a><br />
-					Telehealth is not future,<br />
-					it's just present,<br />
-					<h2>it's here!!</h2>
+				<h3>INFO</h3>
+				<p>Visit HAA web page</p>
+				<p>	
+					<a href="http://healthapplications.com.au" data-role="button" data-icon="arrow-r" 
+					data-iconpos="bottom" data-mini="true" data-inline="true" data-corners="true" 
+					data-shadow="true" data-iconshadow="true" data-theme="b">Healht Applications Aaustralia</a>
 				</p>
 			</div>
 			<!-- /content -->
 			<!-- footer -->
-			<div data-role="footer">
+			<div data-role="footer" data-position="fixed">
 				<h4>&copy; 2013 HAA</h4>
 			</div>
-			<!-- /footer -->
+			<!-- /footer -->		
 		</div>
-		<!-- /page -->
+		
+		<!--------------------------------------- /page -->
+		
+		
+		<div  data-role="page" id="contact" data-theme="a" data-content-theme="a">
+			<!-- Header -->
+			<div data-role="header"  data-iconpos="bottom">
+				<h1>My Health 0.1v</h1>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#info" data-role="button" data-icon="info" data-iconpos="right" data-theme="c">Info</a></li>
+						<li><a href="#highlights" data-role="button" data-icon="star" data-iconpos="right" data-theme="c">Hightlights</a></li>
+						<li><a href="#contact" data-role="button" data-icon="email" data-iconpos="right" data-theme="c">Contact</a></li>
+					</ul>
+				</div><!-- /navbar -->
+
+			</div>
+			<!-- /header -->
+			<!-- Content    -->
+			<div data-role="content">
+				<h3>Contact HAA</h3>
+				<p>By Phone
+					<a href="tel:0411399164" data-role="button" data-icon="arrow-r" 
+					data-iconpos="right" data-mini="false" data-inline="true" data-corners="true" 
+					data-shadow="true" data-iconshadow="true" data-theme="b">Call us</a>
+				</p>
+				<p>By Email
+					<a href="mailto:info@healthapplications.com.au" data-role="button" data-icon="arrow-r" 
+					data-iconpos="right" data-mini="false" data-inline="true" data-corners="true" 
+					data-shadow="true" data-iconshadow="true" data-theme="b">Email us</a>
+				</p>
+			</div>
+			<!-- /content -->			
+			<!-- footer -->
+			<div data-role="footer" data-position="fixed">
+				<h4>&copy; 2013 HAA</h4>
+			</div>
+			<!-- /footer -->		
+		</div>
 	</body>
 </html>
 <script>
 	document.addEventListener("deviceready", onDeviceReady, false);
 
 	function onDeviceReady() {
-		document.addEventListener("pause", onPause, false);
-		document.addEventListener("resume", onResume, false);
-		alert("Hi Luke, press me");
-
+		//alert("Device is Ready");
+		//document.addEventListener("pause", onPause, false);
+		//document.addEventListener("resume", onResume, false);
+		// Get device info
+		var element0 = document.getElementById('devInfo');
+		//replace it with specific information about the device
+		//running the application
+		element0.innerHTML = '<ul><li>Device: ' + device.name + ' (version ' + device.version + ').</li>' + 
+		'<li>Browser agent: ' + navigator.userAgent + '</li></ul>';
+		//Get the appInfo DOM element
+		var element = document.getElementById('appInfo');
+		//replace it with specific information about the device
+		//running the application
+		element.innerHTML = '<ul><li>PhoneGap (version ' + device.phonegap + ')</li>' + 
+		'<li>Device platform: ' + device.platform + '</li>' +
+		'<li>Device name: ' + device.name + ' (version ' + device.version + ').</li></ul>';		
 	}
 
-
-//What to do when paused
-function onPause(){
+	//What to do when paused
+	function onPause(){
+		alert("paused!");		
+	}
 	
-	alert("paused!");
-}
-
-//What to do when resumed
-function onResume()
-{
-	
-	alert("resume");
-}
+	//What to do when resumed
+	//function onResume()
+	//{
+		//alert("resume");
+	//}
 </script>
